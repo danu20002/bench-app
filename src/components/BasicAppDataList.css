@@ -1,0 +1,44 @@
+/* src/BasicAppDataList.css */
+.data-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.data-list-container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.data-list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.data-list-container li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.data-list-container img {
+  border-radius: 8px;
+  margin-right: 20px;
+  max-width: 100px;
+  height: auto;
+}
+
+.data-list-container h2 {
+  margin: 0;
+  color: #333;
+}
+
+.data-list-container p {
+  margin: 5px 0 0;
+  color: #666;
+}

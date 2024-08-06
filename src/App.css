@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* src/App.css */
+.loading-page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Stack children vertically */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #fbc2eb, #a6c0fe); /* Smooth gradient background */
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  border-radius: 50%; /* Circular container */
+  overflow: hidden; /* Hide overflow to maintain circular shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background: white; /* Background color (optional) */
+  margin-bottom: 20px; /* Space between image and text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.logo {
+  width: 100%; /* Scale the image to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #333; /* Dark color for contrast */
+  font-weight: bold; /* Bold text */
+}
+
+.loading-letter {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start off-position */
+  animation: fadeInUp 0.6s forwards; /* Apply animation */
+}
+
+.dots {
+  font-size: 2rem; /* Same size as loading text */
+  margin-left: 10px; /* Space between text and dots */
+  animation: dotsBlink 1.5s infinite; /* Continuous dots animation */
+}
+
+@keyframes fadeInUp {
   to {
-    transform: rotate(360deg);
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to final position */
+  }
+}
+
+@keyframes dotsBlink {
+  0%, 20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
   }
 }
